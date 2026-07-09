@@ -9,7 +9,7 @@ const page = async ({ params }) => {
     const { dish_name,image_link } = data.data;
 
     return (
-        <div className="container mx-auto m-30">
+        <div className="container mx-auto">
             <div className="card bg-base-100 image-full w-fit h-fit shadow-sm mx-auto">
                 <figure>
                     <Image
