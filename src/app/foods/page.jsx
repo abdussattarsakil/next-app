@@ -7,7 +7,7 @@ const page = async() => {
     console.log(foods);
     return (
         <div>
-            <div>
+            <div className="grid grid-cols-4 gap-7 m-20">
                 {foods.map(food=><FoodCard food={food} key={food.id}></FoodCard>)}
             </div>
         </div>
