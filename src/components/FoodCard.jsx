@@ -1,13 +1,18 @@
+import Image from "next/image";
+
 
 const FoodCard = ({ food }) => {
-    const { dish_name } = food;
+    const { dish_name, image_link } = food;
     return (
         <div>
-            <div className="card bg-base-100 shadow-sm h-full">
+            <div className="card bg-base-100 shadow-sm h-full p-10">
                 <figure>
-                    {/* <img
-                        src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-                        alt="Shoes" /> */}
+                    <Image
+                        src={image_link}
+                        alt={dish_name}
+                        width={150}
+                        height={100}
+                    />
                 </figure>
                 <div className="card-body">
                     <h2 className="card-title">
