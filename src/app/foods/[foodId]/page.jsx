@@ -10,13 +10,13 @@ const page = async ({ params }) => {
 
     return (
         <div className="container mx-auto">
-            <div className="card bg-base-200 image-full w-fit h-fit shadow-sm mx-auto">
+            <div className="card bg-base-200 image-full w-full shadow-sm mx-auto p-10">
                 <figure>
                     <Image
                         src={image_link}
                         alt={dish_name}
-                        width={350}
-                        height={200}
+                        width={450}
+                        height={300}
                     />
                 </figure>
                 <div className="card-body">
