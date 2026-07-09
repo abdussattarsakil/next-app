@@ -1,8 +1,9 @@
 import Image from "next/image";
+import Link from "next/link";
 
 
 const FoodCard = ({ food }) => {
-    const { dish_name, image_link, price, rating, category } = food;
+    const { dish_name, image_link, price, rating, category,id } = food;
     return (
         <div>
             <div className="card bg-base-100 shadow-sm h-full p-5 ">
@@ -22,7 +23,10 @@ const FoodCard = ({ food }) => {
                     <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
                     <div className="card-actions justify-end">
                         <button className="btn btn-success">Add to cart</button>
+                        <Link href={`/foods/${id}`}>
                         <button className="btn btn-info">Show details</button>
+                        </Link>
+                        
                     </div>
                 </div>
             </div>
