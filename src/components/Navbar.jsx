@@ -1,6 +1,10 @@
+'use client'
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const Navbar = () => {
+    const pathName = usePathname();
+    console.log(pathName);
     return (
         <div>
             <div className="max-lg:collapse bg-base-200 lg:mb-10 shadow-sm w-full rounded-md">
@@ -19,15 +23,12 @@ const Navbar = () => {
                     <div className="navbar-center hidden lg:flex">
                         <ul className="menu menu-horizontal px-1">
                             <li>
-                                <Link href={"/foods"}>
+                                <Link href={"/foods"} className={pathName=== "/foods"?"text-blue-500":""}>
                                     <button>Foods Gallery</button>
                                 </Link>
                             </li>
                             <li><button>Item 3</button></li>
                         </ul>
-                    </div>
-                    <div className="navbar-end">
-                        <input type="text" placeholder="Search" className="input input-bordered w-64 lg:w-auto" />
                     </div>
                 </div>
 
